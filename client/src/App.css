@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background: linear-gradient( #c5c6ec,  rgb(247, 227, 209));
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 0;
+  padding: 1em;
+}
+
+
+
+header div a {
+  text-decoration: none; 
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  margin-right: 1em;
+}
+
+header div a:hover {
+  text-decoration: underline;
+}
+
+
+body {
+  background-color: rgb(247, 227, 209);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu',Arial,sans-serif;
+}
+
+
+
+
+#rooms {
+  margin-top: 5em;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+
+#media video {
+ height: 40vw;
+  border-radius: 20px;
+  
+}
+
+/* about */
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  height: 100%;
+  width: 100%;
+  
+}
+
+
+
+footer .map {
+  width: 500px;
+  height: 500px;
+
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2vw;
+  font-family: monospace;
+  font-style: italic;
+  margin-left: 1em;
+  
+}
+
+.contacts p {
+  margin-bottom: 3px;
+}
+
+.contacts a {
+  text-decoration: none;
+  color:rgb(55, 0, 255) 
+}
+
+@media (max-width: 1472px) {
+
+  footer .map {
+    width: 400px;
+    height: 400px;
+    background-color: #333;
+  }
+}
+
+@media (max-width: 827px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10em;
+    height: 20vw;
+    width: 100%;
+    
+  }
+  
+  footer .map {
+    width: 300px;
+    height: 300px;
+    background-color: #333;
+  }
+  .contacts {
+    display: flex;
+  }
+}
+
+@media (max-width: 497px) {
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10em;
+    width: 100%;
+    
+  }
+  
+  footer .map {
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+  }
+  .contacts {
+    
+    display: flex;
+    font-size: 20px;
+  }
+  header div a {
+    font-size: 15px;
+  }
+
+  
+
+}
