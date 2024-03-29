@@ -2,7 +2,7 @@
   "development": {
     "username": "denis",
     "password": "123",
-    "database": "hotel",
+    "database": "hotel2",
     "host": "localhost",
     "dialect": "postgres"
   },
