@@ -60,7 +60,7 @@ useEffect(()=>{
         :
         (<div className={styles.text2}> {text.length && text.filter(el=>el.id === 2)[0].mainText}</div>)}
         
-        {!!checkAdmin ? (<><a href='/corp2'><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /><div>corp2.jpg</div></div></a></>):(<><a href='/corp2'><div className={styles.mainImg2}><img src='http://localhost:3100/img/corp2.jpg' /><div>Корпус 2</div></div></a></>)}
+        {!!checkAdmin ? (<><a href='/corp2'><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /><div>corp2.jpg</div></div></a></>):(<><a href='/corp2'><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /><div>Корпус 2</div></div></a></>)}
         
       
       </div>
