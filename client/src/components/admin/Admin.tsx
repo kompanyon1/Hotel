@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import Header from "../header/Header";
+
 import styles from './admin.module.css'
 
 
@@ -28,7 +28,7 @@ const changeHandler =(e: ChangeEvent<HTMLInputElement>)=>{
 
   return (
     <>
-     <Header/>
+    
     <div className={styles.container}>
      
         <input onChange={changeHandler} name="login" placeholder="login"/>

@@ -1,5 +1,4 @@
 .container {
-    margin-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +9,9 @@
 .info {
     width: 80%;
 }
-
+.container h1 {
+    color: black;
+}
 .title {
     font-size: 50px;
 }
@@ -109,6 +110,6 @@ textarea {
     margin-bottom: 15em;
   }
   .info .about  {
-    font-size:10px
+    font-size:15px
 }
 }

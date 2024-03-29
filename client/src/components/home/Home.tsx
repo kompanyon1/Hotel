@@ -4,9 +4,11 @@ import styles from './home.module.css'
 import {textType} from '../../types/types'
 import axios from 'axios'
 
+
 export default function Home() {
   const [text, setText] = useState<textType[]>([])
   const [changeText, setChangeText] = useState({1: '', 2: '', 11: ''})
+  
   
 
 useEffect(()=>{
@@ -31,27 +33,6 @@ useEffect(()=>{
   return (
     <>
     <Header/>
-    
-    <div className={styles.headMain}>
-      
-    <div className={styles.text}>
-    <h6>Гостиница</h6>
-    <h1>236 метров</h1>
-    </div>
-    
-    </div>
-    <section id='media'>
-      <div className={styles.mediaContainer}> 
-      <video src='http://localhost:3100/video/video.mp4' controls></video>
-      <div>
-        {!!checkAdmin ? (<><textarea name='11' defaultValue={text.length && text.filter(el=>el.id === 11)[0].mainText}  onChange={(e)=>changeHandler(e)}></textarea><button  onClick={()=>updateText()}>сохранить</button></>):(<>{text.length && text.filter(el=>el.id === 11)[0].mainText}</>)}
-
-      </div>
-      </div>
-      
-     
-      
-     </section>
     <div className={styles.container}>
      <section id={styles.main}>
 

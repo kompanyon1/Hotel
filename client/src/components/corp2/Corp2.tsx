@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react'
-import Header from '../header/Header'
+
 import styles from './corp2.module.css'
 import axios from 'axios'
 import { textType } from '../../types/types'
@@ -35,10 +35,10 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
 
   return (
     <>
-    <Header/>
+    <div style={{margin: '10px'}}><a href='/' style={{textDecoration: 'none', color: 'black'}}>на главную</a></div>
     {!!checkAdmin && <button onClick={updateText}>сохранить изменения</button>}
     <div className={styles.container}>
-        <h1>Корпус 1</h1>
+        <h1>Корпус 2</h1>
         <div className={styles.title}>
           Комната № 1
         </div>
