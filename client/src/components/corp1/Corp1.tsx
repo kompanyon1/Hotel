@@ -17,14 +17,14 @@ const [changeText, setChangeText] = useState(
   const checkAdmin = localStorage.getItem('adminAuth')
   
   useEffect(()=>{
-    axios.get<textType[]>('http://localhost:3100/text')
+    axios.get<textType[]>(`${import.meta.env.VITE_URL}/text`)
     .then((res)=> setText(res.data))
     .catch((err)=>console.log(err))
   },[])
 
 
   const updateText = () => {
-    axios.post('http://localhost:3100/setText/corp1', changeText).catch((err)=>console.log(err))
+    axios.post(`${import.meta.env.VITE_URL}/setText/corp1`, changeText).catch((err)=>console.log(err))
 }
 
 const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
@@ -44,20 +44,20 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src='http://localhost:3100/img/corp1room1_1.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room1_1.jpg`}/>
           {!!checkAdmin && <p>corp1room1_1.jpg</p>}
           </div>
           <div className={styles.block2}>
             <div>
-            <img src='http://localhost:3100/img/corp1room1_2.jpg'/>
+            <img src={`${import.meta.env.VITE_URL}/img/corp1room1_2.jpg`}/>
             {!!checkAdmin && <p>corp1room1_2.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room1_3.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room1_3.jpg`}/>
           {!!checkAdmin && <p>corp1room1_3.jpg</p>}
             </div>
           <div>
-          <img src='http://localhost:3100/img/corp1room1_4.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room1_4.jpg`}/>
           {!!checkAdmin && <p>corp1room1_4.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room1_5.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room1_5.jpg`}/>
           {!!checkAdmin && <p>corp1room1_5.jpg</p>}
           </div>
           </div>
@@ -73,20 +73,20 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src='http://localhost:3100/img/corp1room2_1.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room2_1.jpg`}/>
           {!!checkAdmin && <p>corp1room2_1.jpg</p>}
           </div>
           <div className={styles.block2}>
             <div>
-            <img src='http://localhost:3100/img/corp1room2_2.jpg'/>
+            <img src={`${import.meta.env.VITE_URL}/img/corp1room2_2.jpg`}/>
             {!!checkAdmin && <p>corp1room2_2.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room2_3.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room2_3.jpg`}/>
           {!!checkAdmin && <p>corp1room2_3.jpg</p>}
             </div>
           <div>
-          <img src='http://localhost:3100/img/corp1room2_4.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room2_4.jpg`}/>
           {!!checkAdmin && <p>corp1room2_4.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room2_5.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room2_5.jpg`}/>
           {!!checkAdmin && <p>corp1room2_5.jpg</p>}
           </div>
           </div>
@@ -103,20 +103,20 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src='http://localhost:3100/img/corp1room3_1.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room3_1.jpg`}/>
           {!!checkAdmin && <p>corp1room3_1.jpg</p>}
           </div>
           <div className={styles.block2}>
             <div>
-            <img src='http://localhost:3100/img/corp1room3_2.jpg'/>
+            <img src={`${import.meta.env.VITE_URL}/img/corp1room3_2.jpg`}/>
             {!!checkAdmin && <p>corp1room3_2.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room3_3.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room3_3.jpg`}/>
           {!!checkAdmin && <p>corp1room3_3.jpg</p>}
             </div>
           <div>
-          <img src='http://localhost:3100/img/corp1room3_4.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room3_4.jpg`}/>
           {!!checkAdmin && <p>corp1room3_4.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room3_5.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room3_5.jpg`}/>
           {!!checkAdmin && <p>corp1room3_5.jpg</p>}
           </div>
           </div>
@@ -133,20 +133,20 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src='http://localhost:3100/img/corp1room4_1.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room4_1.jpg`}/>
           {!!checkAdmin && <p>corp1room4_1.jpg</p>}
           </div>
           <div className={styles.block2}>
             <div>
-            <img src='http://localhost:3100/img/corp1room4_2.jpg'/>
+            <img src={`${import.meta.env.VITE_URL}/img/corp1room4_2.jpg`}/>
             {!!checkAdmin && <p>corp1room4_2.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room4_3.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room4_3.jpg`}/>
           {!!checkAdmin && <p>corp1room4_3.jpg</p>}
             </div>
           <div>
-          <img src='http://localhost:3100/img/corp1room4_4.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room4_4.jpg`}/>
           {!!checkAdmin && <p>corp1room4_4.jpg</p>}
-          <img src='http://localhost:3100/img/corp1room4_5.jpg'/>
+          <img src={`${import.meta.env.VITE_URL}/img/corp1room4_5.jpg`}/>
           {!!checkAdmin && <p>corp1room4_5.jpg</p>}
           </div>
           </div>

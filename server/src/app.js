@@ -3,6 +3,7 @@ const textRouter = require('./routers/textRouter')
 const path = require('path')
 const cors = require('cors')
 const multer = require('multer')
+require('dotenv').config();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -18,10 +19,10 @@ console.log(req.body)
 const upload = multer({storage: storage})
 
 const app = express();
-const PORT = 3100;
+const PORT = process.env.PORT;
 
 app.post('/upload', upload.single('image'), (req,res)=>{
-    res.redirect('http://localhost:5173/');
+    res.redirect(`${process.env.URL}`);
   });
 
 

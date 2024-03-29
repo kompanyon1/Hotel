@@ -16,13 +16,13 @@ export default function Header() {
     const [changeText, setChangeText] = useState({11: ''})
 
     useEffect(()=>{
-      axios.get<textType[]>('http://localhost:3100/text')
+      axios.get<textType[]>(`${import.meta.env.VITE_URL}/text`)
   .then((res)=> setText(res.data))
   .catch((err)=>console.log(err))
     },[])
 
     const updateText = () => {
-      axios.post('http://localhost:3100/setText', changeText).catch((err)=>console.log(err))
+      axios.post(`${import.meta.env.VITE_URL}/setText`, changeText).catch((err)=>console.log(err))
   }
 
   const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
