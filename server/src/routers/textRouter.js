@@ -7,7 +7,7 @@ try {
     const resData = data.map(el=>el.get({plain: true}))
     res.json(resData)
 } catch (error) {
-    console.error(err)
+    console.error(error)
 }
 })
 
@@ -22,7 +22,7 @@ textRouter.post('/setText', async (req,res)=>{
         res.end();
         
     } catch (error) {
-        console.log(err)
+        console.log(error)
     }
 })
 
