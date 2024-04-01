@@ -4,6 +4,8 @@ const path = require('path')
 const cors = require('cors')
 const multer = require('multer')
 require('dotenv').config();
+const https = require('https');
+const fs = require('fs')
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -26,6 +28,8 @@ app.post('/upload', upload.single('image'), (req,res)=>{
   });
 
 
+
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 app.use(express.static(path.join(process.cwd(), 'public')))
@@ -33,6 +37,7 @@ app.use(cors({ credentials: true }));
 
 app.use('/', textRouter);
 
-app.listen(3100, ()=>{
+
+https.createServer(app).listen(3100, ()=>{
     console.log(`Server started at port ${PORT}`)
 })
