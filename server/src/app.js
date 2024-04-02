@@ -4,8 +4,6 @@ const path = require('path')
 const cors = require('cors')
 const multer = require('multer')
 require('dotenv').config();
-const https = require('https');
-const fs = require('fs')
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -38,6 +36,6 @@ app.use(cors({ credentials: true }));
 app.use('/', textRouter);
 
 
-https.createServer(app).listen(3100, ()=>{
+app.listen(3100, ()=>{
     console.log(`Server started at port ${PORT}`)
 })

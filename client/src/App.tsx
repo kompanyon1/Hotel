@@ -6,6 +6,8 @@ import Corp1 from './components/corp1/Corp1'
 import Corp2 from './components/corp2/Corp2'
 import Admin from './components/admin/Admin';
 import { adminType } from './types/types';
+import { AiFillHome } from "react-icons/ai";
+import { FaPhoneSquare } from "react-icons/fa";
 
 
 
@@ -36,7 +38,7 @@ localStorage.setItem('admin', JSON.stringify(admin))
      <section id='about'>
     <footer>
     <YMaps>
-    <div>
+    <div className='mapContainer'>
       <Map className='map' defaultState={{ center: [52.127714, 107.238834], zoom: 16}} >
       <Placemark geometry={[52.127714, 107.238834]}/>
       <ZoomControl options={{}}/>
@@ -44,11 +46,16 @@ localStorage.setItem('admin', JSON.stringify(admin))
     </div>
   </YMaps>
   <div className='contacts'>
-    <p>Адрес: Ул. Пушкина, дом Колотушкина 54</p>
-    <p>Телефон: 8 800 555 35 35</p>
+    <div>
+    <p><AiFillHome /> Ул. Пушкина, дом Колотушкина 54</p>
+    <p><FaPhoneSquare /><a href ='tel:+8 800 555 35 35'> +8 800 555 35 35</a> </p>
+    </div>
+    <div>
     <p>Как проехать до нас из <a href='https://search.biletavto.ru/Улан-Удэ/Ильинка/'>Улан-Удэ в Ильинку</a></p>
     <p>Купить билеты из <a href='https://search.biletavto.ru/Ильинка/Улан-Удэ/'>Ильинки в Улан-Удэ</a></p>
     <p>Расписание всех рейсов на автобусы доступны по ссылке <a href='https://biletavto.ru/'>biletavto.ru</a></p>
+    </div>
+    
     
   </div>
     </footer>

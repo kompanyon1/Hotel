@@ -3,6 +3,14 @@ import { ChangeEvent, useEffect, useState } from 'react'
 import styles from './corp1.module.css'
 import axios from 'axios'
 import { textType } from '../../types/types'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/bundle'
+
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 
 export default function Corp1() {
 
@@ -42,9 +50,37 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         <div className={styles.title}>
           Комната № 1
         </div>
+        
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src={`${import.meta.env.VITE_URL}/img/corp1room1_1.jpg`}/>
+          <div className={styles.swiper}>
+        <Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      loop={true}
+      slidesPerView={'auto'}
+      coverflowEffect={
+        {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5
+        }
+      }
+      navigation
+      pagination={{el: '', clickable: true}}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      className={styles.swiper_container}
+    >
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room1_1.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room1_2.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room1_3.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room1_4.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room1_5.jpg`}/></SwiperSlide>
+  
+    </Swiper>
+        </div>
           {!!checkAdmin && <p>corp1room1_1.jpg</p>}
           </div>
           <div className={styles.block2}>
@@ -73,7 +109,34 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src={`${import.meta.env.VITE_URL}/img/corp1room2_1.jpg`}/>
+          <div className={styles.swiper}>
+        <Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      loop={true}
+      slidesPerView={'auto'}
+      coverflowEffect={
+        {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5
+        }
+      }
+      navigation
+      pagination={{el: '', clickable: true}}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      className={styles.swiper_container}
+    >
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room2_1.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room2_2.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room2_3.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room2_4.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room2_5.jpg`}/></SwiperSlide>
+  
+    </Swiper>
+        </div>
           {!!checkAdmin && <p>corp1room2_1.jpg</p>}
           </div>
           <div className={styles.block2}>
@@ -103,7 +166,34 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src={`${import.meta.env.VITE_URL}/img/corp1room3_1.jpg`}/>
+          <div className={styles.swiper}>
+        <Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      loop={true}
+      slidesPerView={'auto'}
+      coverflowEffect={
+        {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5
+        }
+      }
+      navigation
+      pagination={{el: '', clickable: true}}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      className={styles.swiper_container}
+    >
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room3_1.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room3_2.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room3_3.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room3_4.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room3_5.jpg`}/></SwiperSlide>
+  
+    </Swiper>
+        </div>
           {!!checkAdmin && <p>corp1room3_1.jpg</p>}
           </div>
           <div className={styles.block2}>
@@ -133,7 +223,34 @@ const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>): void => {
         </div>
         <div className={styles.images}>
           <div className={styles.block1}>
-          <img src={`${import.meta.env.VITE_URL}/img/corp1room4_1.jpg`}/>
+          <div className={styles.swiper}>
+        <Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      loop={true}
+      slidesPerView={'auto'}
+      coverflowEffect={
+        {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5
+        }
+      }
+      navigation
+      pagination={{el: '', clickable: true}}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      className={styles.swiper_container}
+    >
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room4_1.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room4_2.jpg`}/></SwiperSlide>
+      <SwiperSlide><img src={`${import.meta.env.VITE_URL}/img/corp1room4_3.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room4_4.jpg`}/></SwiperSlide>
+      <SwiperSlide> <img src={`${import.meta.env.VITE_URL}/img/corp1room4_5.jpg`}/></SwiperSlide>
+  
+    </Swiper>
+        </div>
           {!!checkAdmin && <p>corp1room4_1.jpg</p>}
           </div>
           <div className={styles.block2}>

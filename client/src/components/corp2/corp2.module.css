@@ -1,5 +1,4 @@
 .container {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,20 +9,24 @@
 .info {
     width: 80%;
 }
-
-.title {
-    font-size: 50px;
-   
-}
 .container h1 {
     color: black;
 }
+.title {
+    font-size: 50px;
+}
+
 .images {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .block1 {
+   
     margin-right: 35px;
+    margin-bottom: 35px;
+  
 }
 
 .block2 div{
@@ -43,7 +46,7 @@ border-radius: 20px;
 }
 
 .info .about  {
-    font-size: 20px;
+    font-size: 40px;
     max-width: 100%;
     margin-bottom: 2em;
 }
@@ -53,15 +56,33 @@ textarea {
 }
 
 
-@media (max-width: 1472px) {
-    .block1 img {
-        height: 270px;
+.swiper {
+    width: 80vh;
+}
+
+.swiper img {
+    
+    width: 80vh;
+    border-radius: 20px;
+}
+.swiper_container {
+    
+    
+    position: relative;
+  }
+  
+  .swiper-slide {
+    
+    position: relative;
+  }
+
+@media (max-width: 1572px) {
+    .block1 {
+        margin: 0;
+        margin-bottom: 2em;
     }
-    .block2 img {
-        height: 115px;
-        width: 150px;
-        margin-right: 35px;
-        border-radius: 20px;
+    .block2 {
+        display: none;
     }
     .title {
         font-size: 30px;
@@ -69,17 +90,14 @@ textarea {
 }
 
 @media (max-width: 827px) {
-    .block1 img {
-        height: 150px;
-        border-radius: 5px;
+    .block1 {
+        margin: 0;
+        margin-bottom: 2em;
     }
-    .block2 img {
-        height: 57.5px;
-        width: 75px;
-        margin-right: 35px;
-        border-radius: 20px;
-        border-radius: 5px;
+    .block2 {
+        display: none;
     }
+
     .title {
         font-size: 20px;
     }
@@ -89,29 +107,33 @@ textarea {
 }
 
 @media (max-width: 390px) {
-    .block1 img {
-        height: 100px;
-        width: 100px;
-        border-radius: 5px;
-    }
-    .block2 img {
-        height: 40px;
-        width: 75px;
-        margin-right: 35px;
-        border-radius: 20px;
-        border-radius: 5px;
+    .block1 {
+        margin: 0;
+        margin-bottom: 2em;
     }
 
-    .block2 div{
-        margin-bottom: 16px;
-    }                                                               
+    .swiper{
+        width: 40vh;
+        
+    }
+    .swiper_container img{
+       
+        width: 40vh;
+        height: 30vh;
+    }
+
+    .block2 {
+        display: none;
+    }
+
+                                                                
     .title {
-        font-size: 10px;
+        font-size: 20px;
     }
   .container {
     margin-bottom: 15em;
   }
   .info .about  {
-    font-size:10px
+    font-size:20px
 }
 }

@@ -9,7 +9,7 @@ export default function Home() {
   const [text, setText] = useState<textType[]>([])
   const [changeText, setChangeText] = useState({1: '', 2: '', 11: ''})
   
-
+console.log(text)
 
 useEffect(()=>{
   axios.get<textType[]>(`${import.meta.env.VITE_URL}/text`)
@@ -44,11 +44,11 @@ useEffect(()=>{
       <div className={styles.mainImages}>
         <div className={styles.divCorp1}>
         {!!checkAdmin ?
-         (<><a href='/corp1'><div className={styles.mainImg1}><img src={`${import.meta.env.VITE_URL}/img/corp1.jpg`} width={'300px'}/>
+         (<><div className={styles.divCont}><a href='/corp1'>Корпус 1</a><div className={styles.mainImg1}><img src={`${import.meta.env.VITE_URL}/img/corp1.jpg`} width={'300px'}/>
          
-         <div>corp1.jpg</div></div></a></>)
+         </div></div></>)
           :
-           (<><a href='/corp1'><div className={styles.mainImg1}><img src={`${import.meta.env.VITE_URL}/img/corp1.jpg`}/><div>Корпус 1</div></div></a></>)}
+           (<><div  className={styles.divCont}><a href='/corp1'>Корпус 1</a><div className={styles.mainImg1}><img src={`${import.meta.env.VITE_URL}/img/corp1.jpg`}/></div></div></>)}
         {!!checkAdmin ? 
         (<><textarea name='1' defaultValue={text.length && text.filter(el=>el.id === 1)[0].mainText} className={styles.text1} onChange={(e)=>changeHandler(e)}></textarea><button id='0' onClick={()=>updateText()}>сохранить</button></>)
         :
@@ -60,7 +60,8 @@ useEffect(()=>{
         :
         (<div className={styles.text2}> {text.length && text.filter(el=>el.id === 2)[0].mainText}</div>)}
         
-        {!!checkAdmin ? (<><a href='/corp2'><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /><div>corp2.jpg</div></div></a></>):(<><a href='/corp2'><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /><div>Корпус 2</div></div></a></>)}
+        {!!checkAdmin ? (<><div className={styles.divCont}><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /></div><a href='/corp2' >Корпус 2</a></div></>)
+        :(<><div  className={styles.divCont}><a href='/corp2' >Корпус 2</a><div className={styles.mainImg2}><img src={`${import.meta.env.VITE_URL}/img/corp2.jpg`} /></div></div></>)}
         
       
       </div>
