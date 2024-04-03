@@ -87,6 +87,15 @@ textarea {
     .title {
         font-size: 30px;
     }
+    .swiper{
+        width: 70vh;
+        
+    }
+    .swiper_container img{
+       
+        width: 70vh;
+        height: 50vh;
+    }
 }
 
 @media (max-width: 827px) {
@@ -103,6 +112,15 @@ textarea {
     }
     .info .about  {
         font-size:15px;
+    }
+    .swiper{
+        width: 40vh;
+        
+    }
+    .swiper_container img{
+       
+        width: 40vh;
+        height: 30vh;
     }
 }
 

@@ -6,58 +6,59 @@ html {
 }
 
 
-header {
-  position: relative;
-  display: flex;
-  height: 100vh;
-  background-image: url(фон2.jpg);
-  background-size: cover;
-}
 
 
 
-header .links {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-}
+
 
 header .links a {
   
   font-size: 30px;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   padding: 10px;
   
 }
 
-header .name {
-  position: absolute;
-  right: 10%;
-  top: 0%;
+.fist{
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid black;
+  
+}
+.fist .name {
+  width: 50%;
+  height: 100%;
+}
+
+.fist .desc {
+
+  width: 50%;
+  height: 100%;
+
+}
+.name img {
+width: 100%;
+height: 100%;
+border-radius: 20px;
 }
 
 .desc {
-  position: absolute;
-  bottom: 20%;
-  left: 5%;
-  width: 40%;
-  font-size: 2vw;
-  color: rgb(255, 255, 255);
-  background: transparent;
-  backdrop-filter: blur(20px);
  
-  padding: 5px;
-  border-radius: 20px;
-  text-align: center;
+  padding: 1em;
+  font-size: 2vw;
+  color: rgb(0, 0, 0);
+text-align: initial;
+  
 }
+
 h1 {
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-size: 5vw;
   margin-top: 0;
 }
 
 h6 {
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-size: 2vw;
   margin-bottom: 0;
 }
@@ -148,36 +149,28 @@ footer {
  
   
 
-  .contacts {
-    display: flex;
-  }
+ 
 }
 
 @media (max-width: 497px) {
-  
-
   .contacts {
     
     display: flex;
     font-size: 20px;
   }
 
-  header {
-    height: 20vh;
-  }
   header .links a {
     font-size: 12px;
     padding: 3px;
   }
-
-  .desc {
-    width: 80%;
-    font-size: 10px;
-    font-style: italic;
-  }
-  
-  header textarea {
-    height: 40px;
+  .fist{ 
+    flex-direction: column;
   }
 
+  .fist .name {
+    width: 100%;
+  }
+ .fist .desc {
+    width: 100%;
+  }
 }

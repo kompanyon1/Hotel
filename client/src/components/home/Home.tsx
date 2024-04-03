@@ -9,7 +9,7 @@ export default function Home() {
   const [text, setText] = useState<textType[]>([])
   const [changeText, setChangeText] = useState({1: '', 2: '', 11: ''})
   
-console.log(text)
+
 
 useEffect(()=>{
   axios.get<textType[]>(`${import.meta.env.VITE_URL}/text`)
@@ -34,6 +34,33 @@ useEffect(()=>{
     <>
     <Header/>
     <div className={styles.container}>
+    <h6>гостиница</h6>
+      <h1>236 метров</h1>
+      <div className='fist'>
+      <div className="name">
+      
+      <img src='фон.jpg' />
+    </div>
+    <div className="desc">
+      {!!checkAdmin ? 
+      
+      
+      (<>
+      <textarea 
+      name='11'
+       defaultValue={text.length && text.filter(el=>el.id === 11)[0].mainText}
+        onChange={(e)=>changeHandler(e)}>
+        </textarea>
+        <button 
+        id='1' 
+        onClick={()=>updateText()}>сохранить
+        </button>
+        </>)
+        :
+        (<>{text.length && text.filter(el=>el.id === 11)[0].mainText}</>)}
+    </div>
+      </div>
+    
      <section id={styles.main}>
 
       <section id='rooms'>
